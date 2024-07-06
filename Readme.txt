@@ -6,6 +6,8 @@
 - perl-Email-Outlook-Message-scripts 
 - mpack
 
-Делался для себя под ALT Linux
+Делался под ALT Linux
 
-Spec для сборки в пакет также положил
+Spec для сборки в пакет приложен
+
+Для установки на ALT Linux без пакета, перейдите в раздел Releases
