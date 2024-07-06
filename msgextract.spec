@@ -4,7 +4,7 @@ Release: alt1
 
 Summary: Easily extract the contents of MSG email files
 
-License: GPLv2+
+License: GPLv2
 Group: File tools
 Url: https://github.com/AlexanderShad/msgextract.git
 
