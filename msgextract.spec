@@ -6,7 +6,7 @@ Summary: Easily extract the contents of MSG email files
 
 License: GPLv2+
 Group: File tools
-Url: %name-%version.tar
+Url: https://github.com/AlexanderShad/msgextract.git
 
 Source: %name-%version.tar
 
