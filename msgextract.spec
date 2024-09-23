@@ -1,5 +1,5 @@
 Name: msgextract
-Version: 0.1
+Version: 0.2
 Release: alt1
 
 Summary: Easily extract the contents of MSG email files
@@ -28,5 +28,5 @@ install -Dm755 %_builddir/%name-%version/%name.sh %buildroot%_bindir/%name
 %_bindir/%name
 
 %changelog
-* Sat Jul 06 2024 Aleksandr Shamaraev <mr.shad@> 0.1-alt1
+* Sun Sep 23 2024 Aleksandr Shamaraev <mr.shad@> 0.2-alt1
 - first build
