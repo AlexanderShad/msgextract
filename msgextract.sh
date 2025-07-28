@@ -1,6 +1,7 @@
 #!/bin/bash
-# Easily extract the contents of MSG email files v.0.3
+# Easily extract the contents of MSG email files v.0.4
 # https://github.com/AlexanderShad/msgextract
+# https://altlinux.space/aleksandershad/msgextract
 
 if [[ -n "$1" ]]; then
 	while [[ $# -gt 0 ]]; do
@@ -11,6 +12,7 @@ if [[ -n "$1" ]]; then
 				echo ""
 				echo "msgextract <file name>.msg"
 				echo ""
+				echo "--eml, -e - converting to EML"
 				echo "--help, -h - show help"
 				echo "--version, -v - show version"
 				echo ""
@@ -18,8 +20,33 @@ if [[ -n "$1" ]]; then
 			;;
 
 			--version|-v)
-				echo "version 0.3"
+				echo "version 0.4"
 				exit 0
+			;;
+
+			--eml|-e)
+				if [[ $2 =~ ".msg" ]]; then
+
+					echo -e '\e[042;30m --- Converting started... --- \033[0m\n'
+
+					if [ -e "$(cd "$(dirname "$2")"; pwd -P)/$(basename "$2")" ] ; then
+
+						echo ''
+						echo -e '\e[0;31m* msgconverting...\e[0m'
+						echo ''
+
+						msgconvert "$(cd "$(dirname "$2")"; pwd -P)/$(basename "$2")"
+
+						echo -e '\e[042;30m --- Done --- \033[0m\n'
+
+					else
+						echo -e '\e[042;30m --- File not found. --- \033[0m\n'
+					fi
+					exit 0
+				else
+					echo -e '\e[042;30m --- Unknown argument. --- \033[0m\n'
+					exit 0
+				fi
 			;;
 
 			*)
